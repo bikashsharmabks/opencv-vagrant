@@ -71,6 +71,16 @@ make && sudo make install
 cd ~/.virtualenvs/cv/lib/python3.5/site-packages
 ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 
+echo "installing face_recognition"
+sudo apt-get install libboost-all-dev
+
+pip install dlib
+pip install face_recognition
+
+echo "install visitor stats specific dependencies"
+pip install tornado
+pip install gen
+
 # create jupyter configuration file
 mkdir -p ~/.jupyter
 cd ~/.jupyter
