@@ -16,6 +16,9 @@ vagrant ssh
 workon cv
 git clone https://github.com/bikashsharmabks/visitor-stats-computer-vision.git
 
+//provide permission to camera
+sudo chmod -cv 777 /dev/video0
+
 cd visitor-stats-computer-vision
 python start.py
 ```
