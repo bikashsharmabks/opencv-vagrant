@@ -44,19 +44,19 @@ pip install numpy scipy scikit-learn scikit-image matplotlib ipython jupyter pan
 if [ ! -d "opencv" ]; then 
     # git clone --depth 1 https://github.com/opencv/opencv.git
     # git clone --depth 1 https://github.com/opencv/opencv_contrib.git
-    wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
+    wget -O opencv.zip https://github.com/opencv/opencv/archive/3.2.0.zip
     unzip opencv.zip
-    wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
+    wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
     unzip opencv_contrib.zip
 else
-   cd ~/opencv-3.3.0
+   cd ~/opencv-3.2.0
    #git pull
-   cd ~/opencv_contrib-3.3.0
+   cd ~/opencv_contrib-3.2.0
    #git pull    
 fi 
 
 # about to build opencv
-cd ~/opencv-3.3.0
+cd ~/opencv-3.2.0
 mkdir -p build
 cd build/
 
@@ -65,7 +65,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  -D CMAKE_INSTALL_PREFIX=/usr/local \
  -D INSTALL_C_EXAMPLES=OFF \
  -D INSTALL_PYTHON_EXAMPLES=OFF \
- -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
+ -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.2.0/modules \
  -D BUILD_EXAMPLES=OFF \
  -D BUILD_opencv_freetype=OFF  ..
 
