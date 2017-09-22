@@ -9,6 +9,7 @@ echo "Installing packages..."
 
 # update apt-get lists
 sudo apt-get -q update
+sudo apt-get install unzip
 
 # install all required packages
 sudo apt-get install -qy build-essential cmake git pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev \
