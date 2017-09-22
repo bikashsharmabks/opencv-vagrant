@@ -70,7 +70,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  -D BUILD_opencv_freetype=OFF  ..
 
 # compile and install
-make && sudo make install 
+make -j2
+make install
+sudo ldconfig
 
 # link the opencv lib into the virtualenv as cv2
 cd ~/.virtualenvs/cv/lib/python3.5/site-packages
